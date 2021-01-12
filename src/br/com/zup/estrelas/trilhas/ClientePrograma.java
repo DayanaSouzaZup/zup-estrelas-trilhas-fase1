@@ -43,7 +43,7 @@ public class ClientePrograma {
 
 	public static void listarClientes(ClienteCadastro cliente) {
 
-		cliente.listarClientes(cliente);
+		cliente.listarClientes();
 
 	}
 
@@ -58,10 +58,10 @@ public class ClientePrograma {
 	private static void deletarCliente(Scanner teclado, ClienteCadastro cliente) {
 		System.out.println("Digite o CPF do cliente que deseja deletar:");
 		String cpf = teclado.next();
+		
 		cliente.deletarCliente(cpf);
 		System.out.println("Cliente deletado com sucesso!\n");
 
-		cliente.deletarCliente(cpf);
 
 	}
 
@@ -86,7 +86,7 @@ public class ClientePrograma {
 				break;
 
 			case (2):
-				//
+				listarClientes(cliente);
 
 				break;
 

@@ -7,45 +7,53 @@ public class ClienteCadastro {
 	// Map<String, ClienteDados> registroDeCliente = new HashMap<String,
 	// ClienteDados>();
 
-	ArrayList<ClienteDados> clientes = new ArrayList<>();
+	ArrayList<ClienteDados> clientesArmazenados = new ArrayList<>();
 
 	public void adicionarCliente(String nome, int idade, String cpf, String telefone, String endereco, String email) {
 
 		ClienteDados clienteAdicionado = new ClienteDados(nome, idade, cpf, telefone, endereco, email);
 
-		clientes.add(clienteAdicionado);
-		System.out.println(clienteAdicionado);
+		clientesArmazenados.add(clienteAdicionado);
+		clienteAdicionado.printCliente();
 
 	}
 
-	public void listarClientes(ClienteCadastro cliente) {
+	public void listarClientes() {
 
-		for (ClienteDados clientesLista : clientes) {
-			System.out.println(clientesLista);
+		for (ClienteDados clientesLista : clientesArmazenados) {
+			clientesLista.printCliente();
 		}
 
 	}
 
-	public boolean consultarClientePeloCpf(String cpf, ClienteCadastro cliente) {
+	public boolean consultarClientePeloCpf(String cpf) {
 
-		if (cliente.equals(cpf)) {
-			System.out.println(cliente);
-			return true;
+		for (ClienteDados clienteListadoCpf : clientesArmazenados) {
+
+			if (clienteListadoCpf.getCpf().equals(cpf)) {
+				clienteListadoCpf.printCliente();
+				return true;
+			}
 		}
 
 		System.out.println("Cliente inexistente");
 		return false;
 	}
 
-	public boolean deletarCliente(String cpf, ClienteCadastro cliente) {
+	public boolean deletarCliente(String cpf) {
 
-		if (cliente.equals(cpf)) {
-			clientes.remove(cliente);
-			System.out.println("Cliente removido!");
-			return true;
+		for (ClienteDados clienteParaSerDeletado : clientesArmazenados) {
+			
+			if (clienteParaSerDeletado.getCpf().equals(cpf)) {
+				clientesArmazenados.remove(clienteParaSerDeletado);
+				return true;
+			}
 		}
 		System.out.println("Cliente inexistente!");
 		return false;
 
 	}
+
+	 
+	
 }

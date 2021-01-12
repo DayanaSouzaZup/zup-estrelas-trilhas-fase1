@@ -3,7 +3,6 @@ package br.com.zup.estrelas.trilhas;
 public class ClienteDados {
 
 	private String nome;
-
 	private int idade;
 	private String cpf;
 	private String telefone;
@@ -71,14 +70,14 @@ public class ClienteDados {
 		this.email = email;
 	}
 	
-public void dadosCliente () {
+public void printCliente () {
 		
 		System.out.printf("\nNome: " + this.getNome());
-		System.out.printf("Idade: " + this.getIdade());
-		System.out.printf("CPF: ", this.getCpf());
-		System.out.printf("Telefone: ", this.getTelefone());
-		System.out.printf("Endereço: ", this.getEndereco());
-		System.out.printf("Email: ", this.getEmail());
+		System.out.printf("\nIdade: " + this.getIdade());
+		System.out.printf("\nCPF: " + this.getCpf());
+		System.out.printf("\nTelefone: " + this.getTelefone());
+		System.out.printf("\nEndereço: "+ this.getEndereco());
+		System.out.printf("\nEmail: " + this.getEmail());
 		System.out.println("==========================================");
 	}
 
