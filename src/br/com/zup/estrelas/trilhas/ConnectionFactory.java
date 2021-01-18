@@ -1,5 +1,20 @@
-package br.com.zup.estrelas.trilhas;
-
-public class ConnectionFactory {
-
-}
+//package br.com.zup.estrelas.trilhas;
+//
+//import java.sql.Connection;
+//import java.sql.DriverManager;
+//import java.sql.SQLException;
+//
+//public class ConnectionFactory {
+//	
+//public Connection getConnection() {
+//		
+//		try {
+//			return (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/clientes?user=root"
+//					+ "&password=root&useTimezone=true&serverTimezone=UTC");
+//
+//		} catch (SQLException e) {
+//			throw new RuntimeException(e);
+//		}
+//	}
+//
+//}

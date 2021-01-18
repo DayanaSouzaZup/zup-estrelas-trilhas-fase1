@@ -1,8 +1,9 @@
 package br.com.zup.estrelas.trilhas;
 
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Scanner;
-
-import javax.servlet.http.HttpServlet;
 
 public class ClientePrograma {
 
@@ -65,7 +66,9 @@ public class ClientePrograma {
 
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  throws SQLException, IOException{
+		
+		//Connection conn = new ConnectionFactory().getConnection();
 
 		ClienteCadastro cliente = new ClienteCadastro();
 
